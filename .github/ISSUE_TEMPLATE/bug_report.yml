@@ -1,0 +1,78 @@
+name: Bug report
+description: Something in an SDK or package does not work as documented.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste secret keys, webhook secrets or personal data into this form. Redact them first.**
+
+        For a security problem, do not open an issue. Follow the [security policy](https://github.com/fingerly-io/.github/security/policy).
+  - type: dropdown
+    id: package
+    attributes:
+      label: Which SDK or package
+      options:
+        - Web, browser JavaScript (@fingerly/web-js)
+        - Web, React (@fingerly/react)
+        - Web, Next.js (@fingerly/next)
+        - Web, Vue (@fingerly/vue)
+        - Web, Nuxt (@fingerly/nuxt)
+        - Web, Svelte (@fingerly/svelte)
+        - Web, Angular (@fingerly/angular)
+        - Mobile, iOS
+        - Mobile, Android
+        - Mobile, React Native (@fingerly/react-native)
+        - Mobile, Flutter (fingerly_flutter)
+        - Mobile, Lynx (@fingerly/lynx)
+        - Server, Node.js (@fingerly/node)
+        - Server, Python (fingerly)
+        - Server, Go (fingerly-go)
+        - Server, Java (io.fingerly:fingerly-server)
+        - Server, .NET (Fingerly.Server)
+        - Server, PHP (fingerly/fingerly-php)
+        - Server, Ruby (fingerly)
+        - Server, Rust (fingerly)
+        - Proxy, Cloudflare Worker
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: "0.2.0"
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Platform or runtime and version
+      description: For example Node.js 22, Python 3.12, iOS 18, Android 15, Chrome 130.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: Include the error message or response, with secrets and personal data redacted.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: A minimal example is the fastest way to a fix.
+    validations:
+      required: true
+  - type: input
+    id: request-id
+    attributes:
+      label: Request id (optional)
+      description: The request_id from the response, also sent in the X-Request-Id header. It is an opaque id and safe to share.

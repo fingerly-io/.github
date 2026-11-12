@@ -1,0 +1,51 @@
+name: Question
+description: Ask how to use an SDK or package.
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste secret keys, webhook secrets or personal data into this form. Redact them first.**
+
+        Please check the [documentation](https://docs.fingerly.io) first. For account or billing questions, write to [support@fingerly.io](mailto:support@fingerly.io).
+  - type: dropdown
+    id: package
+    attributes:
+      label: Which SDK or package
+      options:
+        - Web, browser JavaScript (@fingerly/web-js)
+        - Web, React (@fingerly/react)
+        - Web, Next.js (@fingerly/next)
+        - Web, Vue (@fingerly/vue)
+        - Web, Nuxt (@fingerly/nuxt)
+        - Web, Svelte (@fingerly/svelte)
+        - Web, Angular (@fingerly/angular)
+        - Mobile, iOS
+        - Mobile, Android
+        - Mobile, React Native (@fingerly/react-native)
+        - Mobile, Flutter (fingerly_flutter)
+        - Mobile, Lynx (@fingerly/lynx)
+        - Server, Node.js (@fingerly/node)
+        - Server, Python (fingerly)
+        - Server, Go (fingerly-go)
+        - Server, Java (io.fingerly:fingerly-server)
+        - Server, .NET (Fingerly.Server)
+        - Server, PHP (fingerly/fingerly-php)
+        - Server, Ruby (fingerly)
+        - Server, Rust (fingerly)
+        - Proxy, Cloudflare Worker
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: "0.2.0"
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Say what you tried and what the documentation did not answer.
+    validations:
+      required: true

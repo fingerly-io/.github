@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://docs.fingerly.io
+    about: Guides for every SDK, the API reference and troubleshooting.
+  - name: Email support
+    url: mailto:support@fingerly.io
+    about: Account, billing and integration help from the Fingerly team.
+  - name: Report a vulnerability
+    url: https://github.com/fingerly-io/.github/security/policy
+    about: Do not open a public issue for a security problem. Read the policy and write to security@fingerly.io.

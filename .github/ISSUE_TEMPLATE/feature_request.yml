@@ -1,0 +1,54 @@
+name: Feature request
+description: Suggest an improvement to an SDK or package.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste secret keys, webhook secrets or personal data into this form. Redact them first.**
+  - type: dropdown
+    id: package
+    attributes:
+      label: Which SDK or package
+      options:
+        - Web, browser JavaScript (@fingerly/web-js)
+        - Web, React (@fingerly/react)
+        - Web, Next.js (@fingerly/next)
+        - Web, Vue (@fingerly/vue)
+        - Web, Nuxt (@fingerly/nuxt)
+        - Web, Svelte (@fingerly/svelte)
+        - Web, Angular (@fingerly/angular)
+        - Mobile, iOS
+        - Mobile, Android
+        - Mobile, React Native (@fingerly/react-native)
+        - Mobile, Flutter (fingerly_flutter)
+        - Mobile, Lynx (@fingerly/lynx)
+        - Server, Node.js (@fingerly/node)
+        - Server, Python (fingerly)
+        - Server, Go (fingerly-go)
+        - Server, Java (io.fingerly:fingerly-server)
+        - Server, .NET (Fingerly.Server)
+        - Server, PHP (fingerly/fingerly-php)
+        - Server, Ruby (fingerly)
+        - Server, Rust (fingerly)
+        - Proxy, Cloudflare Worker
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do
+      description: Describe the problem you want solved, not only the change you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to see
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you do today instead
